@@ -1,0 +1,39 @@
+﻿@model object
+
+@if (ViewBag.NumberOfMessages > 0)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-success text-center">
+                    <small>
+                        <i class="fas fa-sms fa-2x ml-3"></i>
+                    </small>
+                    <br>
+                    <strong class="font-italic">
+                        @ViewBag.NumberOfMessages
+                        Tane Mesajınız Var
+                    </strong>
+                </div>
+                <br>
+                <div class="text-center">
+                    <a asp-controller="StaffMessage" asp-action="IncomingMessages" class="btn btn-outline-warning btn-sm">Gelen Mesajlara Git</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="text-center text-danger">
+        <small>
+            <i class="fas fa-comment-slash fa-3x ml-3"></i>
+        </small>
+        <br>
+        <strong class="font-italic text-break">
+            Herhangi Bir Mesaj Yok
+        </strong>
+        <br>
+        <a asp-controller="StaffMessage" asp-action="SendMessageToManager" class="btn btn-success btn-sm mt-2">Mesaj Yolla</a>
+    </div>
+}

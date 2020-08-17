@@ -1,0 +1,17 @@
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.DataAccess.deps.json
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.DataAccess.runtimeconfig.json
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.DataAccess.runtimeconfig.dev.json
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.DataAccess.dll
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.DataAccess.pdb
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.Entities.dll
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.Entities.pdb
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\obj\Debug\netcoreapp3.1\Chase.DataAccess.csprojAssemblyReference.cache
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\obj\Debug\netcoreapp3.1\Chase.DataAccess.AssemblyInfoInputs.cache
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\obj\Debug\netcoreapp3.1\Chase.DataAccess.AssemblyInfo.cs
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\obj\Debug\netcoreapp3.1\Chase.DataAccess.csproj.CoreCompileInputs.cache
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\obj\Debug\netcoreapp3.1\Chase.DataAccess.csproj.CopyComplete
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\obj\Debug\netcoreapp3.1\Chase.DataAccess.dll
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\obj\Debug\netcoreapp3.1\Chase.DataAccess.pdb
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\obj\Debug\netcoreapp3.1\Chase.DataAccess.genruntimeconfig.cache
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.Core.dll
+D:\Asp.netCoreMVC\Chase\Chase.DataAccess\bin\Debug\netcoreapp3.1\Chase.Core.pdb

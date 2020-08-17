@@ -1,0 +1,35 @@
+﻿@model Chase.Entities.DTOs.DutyDto
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+
+@*Görev Ekleme Sayfası*@
+
+<form method="post" class="w-75 mx-auto p-3">
+    @*  <div asp-validation-summary="All"></div>*@
+    <h3 class="text-center" style="font-family: 'Roboto Slab', serif; letter-spacing: 1px; ">Görev Ekleyiniz</h3>
+    <hr class="border-dark">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Görev Adı" asp-for="@Model.Name">
+        <br>
+        <span asp-validation-for="@Model.Name" class="badge-warning"></span>
+    </div>
+    <div class="form-group">
+        <textarea type="text" class="form-control" placeholder="Açıklama" asp-for="@Model.Description"></textarea>
+        <br>
+        <span asp-validation-for="@Model.Description" class="badge-warning"></span>
+    </div>
+    <div class="form-group">
+        <label class="font-italic">İş Durumu</label>
+        <input type="text" class="form-control" asp-for="@Model.UrgencyId"  value="36044" readonly="readonly">
+        @* <select asp-for="@Model.UrgencyId" asp-items="@(new SelectList(@Model.Urgencies,"Id","Definition"))"></select> *@
+        <span asp-validation-for="@Model.UrgencyId" class="badge-warning"></span>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-outline-warning ml-1">Görevi Ekle</button>
+        <a asp-controller="Duty" asp-action="Index" class="btn btn-light"><i class="fas fa-angle-double-left mr-2"></i>Vazgeç</a>
+    </div>
+</form>

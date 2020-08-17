@@ -1,0 +1,53 @@
+﻿@model Chase.Entities.DTOs.DutyListAllDto
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+@if (Model.Reports.Count != 0) @*Raporlarım var ise,Boş Değilse*@
+{
+    <div class="text-right mt-3">
+        <a asp-controller="WorkOrders" asp-action="GetExcelFile" asp-route-Id="@Model.Id" target="_blank" class="btn btn-info">Excel'de Görüntüle</a>
+    </div>
+
+    <table class="table table-striped table-dark mt-3 text-center">
+        <thread>
+            <tr>
+                <th colspan="2">@Model.AppUser.Name @Model.AppUser.SurName Personelin @Model.Name Görevine Yazmış Olduğu raporlar</th>
+            </tr>
+            <tr>
+                <th class="font-italic text-danger" style="text-transform: uppercase">Tanım</th>
+                <th class="font-italic text-danger" style="text-transform: uppercase">Detay</th>
+            </tr>
+            @foreach (var reportsValue in Model.Reports)
+            {
+                <tr>
+                    <th>
+                        @reportsValue.ReportDefinition
+                    </th>
+                    <th>@reportsValue.ReportDetail</th>
+                </tr>
+            }
+
+        </thread>
+
+
+    </table>
+}
+else @*Raporlarım Yok ise,Boş ise*@
+{
+
+    <div class="card bg-secondary">
+        <div class="card-body shadow">
+              <div class="text-center badge-info mt-3">
+            
+                    <strong>
+                        @Model.AppUser.Name @Model.AppUser.SurName Personeliniz @Model.Name Görevin'de şuan aktif olarak çalışıyor.Henüz
+                        Rapor Yazmamış.<i class="fas fa-check-double fa-2x ml-2"></i>
+                    </strong>
+            
+                </div>
+        </div>
+    </div>
+  
+}

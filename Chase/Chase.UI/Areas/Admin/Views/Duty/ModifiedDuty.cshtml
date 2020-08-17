@@ -1,0 +1,26 @@
+﻿@model Chase.Entities.DTOs.DutyDto
+
+@*Görev Güncelleme Sayfası*@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+   
+<form method="post" class="w-75 mx-auto p-3">
+ <h3 class="text-center" style="font-family: 'Roboto Slab', serif; letter-spacing: 1px; ">Görev Güncelleyiniz</h3>
+    <hr class="border-success">
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Name" class="form-control" placeholder="Görev Adı">
+    </div>
+    <br>
+    <div class="form-group">
+        <textarea  asp-for="@Model.Description" class="form-control" placeholder="Görev Açıklaması"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" asp-for="@Model.UrgencyId" readonly="readonly">
+    </div>
+    <br>
+    <div class="text-center">
+        <button type="submit" class="btn btn-outline-success">Görevi Güncelle</button>
+    </div>
+</form>

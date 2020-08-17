@@ -1,0 +1,50 @@
+﻿@model List<Chase.Entities.DTOs.UrgencyDto>
+@*İş Alanı'nın Ana Sayfası*@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (Model.Count != 0) @* ilgili modeldeki listede eleman varsa anlamındadır.0 değilse.Boş Değilse*@
+{
+    <div class="text-center py-2">
+        <small class="display-4">İş Planları Listesi</small>
+    </div>
+    <hr class="border-dark"/>
+    <table class="table table-striped table-dark">
+        <thread>
+            <tr>
+                <th class="text-center">İş'in Planı</th>
+            </tr>
+            <tbody>
+            @foreach (var urgency in Model)
+            {
+                <tr>
+                    <td class="font-italic px-2">@urgency.Definition</td>
+                    <td>
+                        <a asp-controller="Urgency" asp-action="ModifiedUrgency" class="btn btn-outline-warning" asp-route-Id="@urgency.Id">Güncelle</a>
+                    </td>
+                    <td>
+                        <a asp-controller="Urgency" asp-action="RemoveUrgency" class="btn btn-outline-danger" asp-route-id="@urgency.Id" onclick="return confirm('Silmek İstediğiniz den emin misiniz?')"><i class="fas fa-backspace mr-2"></i>Sil</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+
+        </thread>
+
+
+    </table>
+}
+else @*ilgili modeldeki listede eleman yok ise*@
+{
+    <div class="jumbotron">
+        <div class="jumbotron-body">
+            <div class="text-center lead mt-4">
+                <span class="alert-danger"><i class="fas fa-minus-square mr-2 fa-2x"></i>Tanımlı İş Planı Bulunamadı.</span>
+            </div>
+        </div>
+    </div>
+}
+<div class="add-button text-center lead mt-4">
+    <a asp-controller="Urgency" asp-action="InsertUrgency" class="btn btn-outline-secondary">Yeni İş Planı Ekle</a>
+</div>

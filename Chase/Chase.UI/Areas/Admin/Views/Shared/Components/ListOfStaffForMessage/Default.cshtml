@@ -1,0 +1,35 @@
+﻿@model List<Chase.Entities.DTOs.AppUserListDto>  
+<h5 class="text-center" style="font-family: 'Playfair Display', serif;letter-spacing: 1px;">Personel Listesi</h5>
+<a  asp-controller="Admin" asp-action="Index" class="btn btn-outline-secondary btn-sm text-right"><i class="fas fa-backward mr-1"></i>Geri Dön</a>
+<hr class="border-dark">
+ 
+<div style="height:850px; width:650px; overflow:scroll;">
+    @foreach (var users in Model)
+    {
+
+        <div class="container">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-body shadow">
+                            <form method="post" asp-controller="WorkOrders" asp-action="AppointStaff">
+                                <h5 class="card-title">
+                                    <strong style="font-family: 'Arial',serif">Personel Adı Soyadı : </strong>@users.Name @users.SurName
+                                    <br>
+                                    <strong class="text-info" style="font-family: Arial,serif">Personel Şirket Numarası : </strong>@users.Id
+                                    </h5>
+                            
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <i class="fas fa-envelope-square fa-1x mr-2"></i>@users.Email
+                                    </small>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

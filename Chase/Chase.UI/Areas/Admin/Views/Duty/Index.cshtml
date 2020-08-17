@@ -1,0 +1,55 @@
+﻿@model List<Chase.Entities.DTOs.DutyDto>
+@*Görev Listeleme Sayfam*@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<h4 class="text-center display-4 py-2">Görevler Listesi</h4>
+<hr class="border-dark">
+@if (Model.Count != 0)
+{
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Görev Adı</th>
+                <th>Görev Açıklaması</th>
+                <th>Oluşturulma Tarihi</th>
+                <th>İş'in Planı</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        @foreach (var duty in Model)
+        {
+
+            <tr>
+                <td>@duty.Name</td>
+                <td>@duty.Description</td>
+                <td>@duty.CreationDate.ToString("D")</td>
+                <td>@duty.Urgency.Definition</td>@*İşin Açıklaması*@
+                <td>
+                    <a asp-controller="Duty" asp-action="ModifiedDuty" asp-route-id="@duty.Id" class="btn btn-outline-secondary">Güncelle</a>
+                </td>
+                <td>
+                    <a asp-controller="Duty" asp-action="RemoveDuty" asp-route-id="@duty.Id" onclick="return confirm('@duty.Name , Bu Görevi Silmek İstediğiniz den emin misiniz?')" class="btn btn-outline-warning"><i class="fas fa-minus-circle mr-2"></i>Sil</a>
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="jumbotron">
+        <div class="jumbotron-body">
+            <div class="text-center lead mt-4">
+                <span class="alert-danger"><i class="fas fa-exclamation-triangle mr-2 fa-2x"></i>Tanımlı Görev Bulunamadı.</span>
+            </div>
+        </div>
+    </div>
+  
+}
+<div class="text-center mt-3">
+    <a asp-controller="Duty" asp-action="InsertDuty" class="btn btn-success">Görev Ekle</a>
+</div>
+

@@ -1,0 +1,41 @@
+﻿@model List<Chase.Entities.DTOs.AppUserListDto>  
+<h5 class="text-center" style="font-family: 'Playfair Display', serif;letter-spacing: 1px;">Personel Listesi</h5>
+<a asp-controller="WorkOrders" asp-action="Index" class="btn btn-outline-secondary btn-sm text-right"><i class="fas fa-backward mr-1"></i>Geri Dön</a>
+<hr class="border-dark">
+ 
+<div style="height:850px; width:650px; overflow:scroll;">
+    @foreach (var users in Model)
+    {
+
+        <div class="container">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-body shadow">
+                            <form method="post" asp-controller="WorkOrders" asp-action="AppointStaff">
+                                <h5 class="card-title">
+                                    <strong style="font-family: 'Arial',serif">Personel Adı Soyadı : </strong>@users.Name @users.SurName
+                                    <strong style="font-family: Arial,serif">Personel Şirket Numarası : </strong>@users.Id
+                                    </h5>
+                                <p class="card-text">
+                                    <bring-duty user-id="@users.Id"></bring-duty>
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <i class="fas fa-envelope-square fa-1x mr-2"></i>@users.Email
+                                    </small>
+                                </p>
+                                <input type="hidden" name="StaffId" value="@users.Id">@*Personelin Id'sine ulaştık,*@
+                                @*name=StaffId|Form öğeleri için, veriler gönderilirken referans olarak da kullanılır*@
+                                <button type="submit" class="btn btn-outline-success" onclick="return confirm('@users.Name @users.SurName , Personeline Bu Görevi Vermeye Emin misiniz?')">
+                                    Görevlendir
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

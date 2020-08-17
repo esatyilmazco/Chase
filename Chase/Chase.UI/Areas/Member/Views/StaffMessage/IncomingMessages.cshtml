@@ -1,0 +1,121 @@
+﻿@model List<Chase.Entities.DTOs.MessageDto>
+@{
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+
+}
+@*GELEN MESAJLAR*@
+@if (Model.Count > 0)
+{
+    <h4 class="text-center py-4" style="font-family: 'Copperplate Gothic Bold',serif;letter-spacing: 1px;">Gelen Mesajlarım</h4>
+    foreach (var messages in Model)
+    {
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    @if (@messages.MessageText.Length > 200) @*Mesaj Karekter Sayısı 200'ü geçer'se ScroolBar İçine Al*@
+                    {
+                        <div style="height:350px; width:450px; overflow:scroll;">
+                            <div class="card">
+                                <div class="card-body">
+                                    @if (@messages.MessageSendingDate < DateTime.Now.AddMinutes(-40))@*Gelen Mesaj 40 Dakikayı Geçerse*@
+                                    {
+                                        <span style="font-family: Arial,serif">
+                                            <i class="far fa-user text-danger mr-1"></i>@messages.ThePersonWhoSentTheMessage
+                                        </span>
+                                        <div class="text-danger text-center">
+                                            <small style="font-size: 10px;letter-spacing: 1px;">ESKİ MESAJ</small>
+                                        </div>
+                                        <small class="float-right ml-5">
+                                            @messages.MessageSendingDate<i class="fas fa-hourglass-start ml-1 text-danger"></i>
+                                        </small>
+                                    }
+                                    else
+                                    {
+                                        <span style="font-family: Arial,serif">
+                                            <i class="far fa-user text-success mr-1"></i>@messages.ThePersonWhoSentTheMessage
+                                        </span>
+                                        <div class="text-success text-center">
+                                            <small style="font-size: 10px;letter-spacing: 1px;">YENİ MESAJ</small>
+                                        </div>
+                                        <small class="float-right ml-5">
+                                            @messages.MessageSendingDate<i class="fas fa-hourglass-start ml-1 text-success"></i>
+                                        </small>
+                                    }
+                                    <br/>
+                                    <i class="fas fa-comment fa-1x">
+                                        <span style="font-family: 'Bell MT',serif">@messages.MessageText</span>
+                                    </i>
+                                    <div class="text-center">
+                                        <a asp-controller="StaffMessage" asp-action="SendMessageToManager"  class="btn btn-success btn-sm mt-4 mr-2"><i class="fas fa-envelope-open mr-2"></i>Mesaj'ı Yanıtla</a>
+                                        <a asp-controller="StaffMessage" asp-action="RemoveMessage" asp-route-messageId="@messages.Id" onclick="return confirm('Mesajı Silmek İstediğinizden Emin Misiniz?')" class="btn btn-danger btn-sm mt-4">Mesajı Sil<i class="fas fa-backspace ml-2"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="card">
+                            <div class="card-body shadow">
+                                @if (@messages.MessageSendingDate < DateTime.Now.AddMinutes(-40))
+                                {
+                                    <span style="font-family: Arial,serif">
+                                        <i class="far fa-user text-danger mr-1"></i>@messages.ThePersonWhoSentTheMessage
+                                    </span>
+                                    <div class="text-danger text-center">
+                                        <small style="font-size: 10px;letter-spacing: 1px;">ESKİ MESAJ</small>
+                                    </div>
+                                    <small class="float-right ml-5">
+                                        @messages.MessageSendingDate<i class="fas fa-hourglass-start ml-1 text-danger"></i>
+                                    </small>
+                                }
+                                else
+                                {
+                                    <span style="font-family: Arial,serif">
+                                        <i class="far fa-user text-success mr-1"></i>@messages.ThePersonWhoSentTheMessage
+                                    </span>
+                                    <div class="text-success text-center">
+                                        <small style="font-size: 10px; letter-spacing: 1px;">YENİ MESAJ</small>
+                                    </div>
+                                    <small class="float-right ml-5">
+                                        @messages.MessageSendingDate<i class="fas fa-hourglass-start ml-1 text-success"></i>
+                                    </small>
+                                }
+                                <br>
+                                <i class="fas fa-comment fa-1x">
+                                    <span style="font-family: 'Bell MT',serif">@messages.MessageText</span>
+                                </i>
+                                <div class="text-center">
+                                    <a asp-controller="StaffMessage" asp-action="SendMessageToManager" asp-route-ThePersonWhoSentTheMessage="@messages.ThePersonWhoSentTheMessage" class="btn btn-success btn-sm mt-4 mr-2"><i class="fas fa-envelope-open mr-2"></i>Mesaj'ı Yanıtla</a>
+                                    <a asp-controller="StaffMessage" asp-action="RemoveMessage" asp-route-messageId="@messages.Id" class="btn btn-danger btn-sm mt-4" onclick="return confirm('@messages.MessageText Mesajını Silmek İstediğiniz den Emin Misiniz?')">Mesajı Sil<i class="fas fa-backspace ml-2"></i></a>
+
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="jumbotron">
+                    <i class="fas fa-comment-slash fa-2x"></i>
+                    <br>
+                    <span style="font-family: 'Copperplate Gothic Light',fantasy;font-size: 20px;" class="text-danger">Mesaj Bulunumadı.</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+}

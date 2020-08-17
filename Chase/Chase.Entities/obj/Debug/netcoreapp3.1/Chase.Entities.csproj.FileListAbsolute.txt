@@ -1,0 +1,12 @@
+D:\Asp.netCoreMVC\Chase\Chase.Entities\bin\Debug\netcoreapp3.1\Chase.Entities.deps.json
+D:\Asp.netCoreMVC\Chase\Chase.Entities\bin\Debug\netcoreapp3.1\Chase.Entities.dll
+D:\Asp.netCoreMVC\Chase\Chase.Entities\bin\Debug\netcoreapp3.1\Chase.Entities.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Entities\obj\Debug\netcoreapp3.1\Chase.Entities.csprojAssemblyReference.cache
+D:\Asp.netCoreMVC\Chase\Chase.Entities\obj\Debug\netcoreapp3.1\Chase.Entities.AssemblyInfoInputs.cache
+D:\Asp.netCoreMVC\Chase\Chase.Entities\obj\Debug\netcoreapp3.1\Chase.Entities.AssemblyInfo.cs
+D:\Asp.netCoreMVC\Chase\Chase.Entities\obj\Debug\netcoreapp3.1\Chase.Entities.csproj.CoreCompileInputs.cache
+D:\Asp.netCoreMVC\Chase\Chase.Entities\obj\Debug\netcoreapp3.1\Chase.Entities.dll
+D:\Asp.netCoreMVC\Chase\Chase.Entities\obj\Debug\netcoreapp3.1\Chase.Entities.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Entities\bin\Debug\netcoreapp3.1\Chase.Core.dll
+D:\Asp.netCoreMVC\Chase\Chase.Entities\bin\Debug\netcoreapp3.1\Chase.Core.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Entities\obj\Debug\netcoreapp3.1\Chase.Entities.csproj.CopyComplete

@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@*Yönetici Alanı'nın Ana Sayfası. *@
+<body>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body shadow text-center">
+                    <h6>Bildirimler</h6>
+                    <hr class="border-warning">
+                    @*Bildirim*@
+                    @await Component.InvokeAsync("Notification")
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="jumbotron">
+                <div class="jumbotron-body">
+                    <h5 class="text-center">Mesajlar</h5>
+                    <hr class="border-success">
+                    @await Component.InvokeAsync("Message")
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body bg-secondary">
+                <div id="chase-slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner text-center" style="height: 300px;">
+                        <div class="carousel-item active">
+                            <h1 class="display-4">Personel Takip Sistemi</h1>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="display-4">Personele Görev Ver</h1>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="display-4">Verilen Görevlerin Raporlarını Oku</h1>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="display-4">Şirket İçi Haberleşme</h1>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="display-4">Her Platformda</h1>
+                        </div>
+
+                    </div>
+                    <a href="#chase-slider" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon bg-success "></span>
+                    </a>
+                    <a href="#chase-slider" class="carousel-control-next" data-slide="prev">
+                        <span class="carousel-control-next-icon bg-success "></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+
+    </div>
+</div>
+</body>

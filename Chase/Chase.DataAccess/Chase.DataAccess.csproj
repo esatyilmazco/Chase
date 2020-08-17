@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Migrations\20200719110027_AddTableNotification.cs" />
+      <Compile Remove="Migrations\20200719110027_AddTableNotification.Designer.cs" />
+      <Compile Remove="Migrations\20200719110234_AddTableNotifications.cs" />
+      <Compile Remove="Migrations\20200719110234_AddTableNotifications.Designer.cs" />
+      <Compile Remove="Migrations\20200719110505_CreateTableNotification.cs" />
+      <Compile Remove="Migrations\20200719110505_CreateTableNotification.Designer.cs" />
+      <Compile Remove="Migrations\20200719110905_AddTableNotification.cs" />
+      <Compile Remove="Migrations\20200719110905_AddTableNotification.Designer.cs" />
+      <Compile Remove="Migrations\20200719111033_AddTableNotification.cs" />
+      <Compile Remove="Migrations\20200719111033_AddTableNotification.Designer.cs" />
+      <Compile Remove="Migrations\20200719112038_AddTableNotification.cs" />
+      <Compile Remove="Migrations\20200719112038_AddTableNotification.Designer.cs" />
+      <Compile Remove="Migrations\20200719113001_AddTableNotification.cs" />
+      <Compile Remove="Migrations\20200719113001_AddTableNotification.Designer.cs" />
+      <Compile Remove="Migrations\20200719113103_AddTableNotifications.cs" />
+      <Compile Remove="Migrations\20200719113103_AddTableNotifications.Designer.cs" />
+      <Compile Remove="Migrations\20200719113335_AddTableNotification.cs" />
+      <Compile Remove="Migrations\20200719113335_AddTableNotification.Designer.cs" />
+      <Compile Remove="Migrations\20200719115914_createtablenotifications.cs" />
+      <Compile Remove="Migrations\20200719115914_createtablenotifications.Designer.cs" />
+      <Compile Remove="Migrations\20200719120556_AddTableNotification.cs" />
+      <Compile Remove="Migrations\20200719120556_AddTableNotification.Designer.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0-preview.6.20312.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0-preview.6.20312.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0-preview.6.20312.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Chase.Entities\Chase.Entities.csproj" />
+    </ItemGroup>
+
+</Project>

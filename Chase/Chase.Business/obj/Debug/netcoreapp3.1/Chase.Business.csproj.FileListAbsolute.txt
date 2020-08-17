@@ -1,0 +1,16 @@
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.Business.deps.json
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.Business.dll
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.Business.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Business\obj\Debug\netcoreapp3.1\Chase.Business.csprojAssemblyReference.cache
+D:\Asp.netCoreMVC\Chase\Chase.Business\obj\Debug\netcoreapp3.1\Chase.Business.AssemblyInfoInputs.cache
+D:\Asp.netCoreMVC\Chase\Chase.Business\obj\Debug\netcoreapp3.1\Chase.Business.AssemblyInfo.cs
+D:\Asp.netCoreMVC\Chase\Chase.Business\obj\Debug\netcoreapp3.1\Chase.Business.csproj.CoreCompileInputs.cache
+D:\Asp.netCoreMVC\Chase\Chase.Business\obj\Debug\netcoreapp3.1\Chase.Business.dll
+D:\Asp.netCoreMVC\Chase\Chase.Business\obj\Debug\netcoreapp3.1\Chase.Business.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.Core.dll
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.DataAccess.dll
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.Entities.dll
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.DataAccess.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.Entities.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Business\bin\Debug\netcoreapp3.1\Chase.Core.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Business\obj\Debug\netcoreapp3.1\Chase.Business.csproj.CopyComplete

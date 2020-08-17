@@ -1,0 +1,96 @@
+﻿@model List<Chase.Entities.DTOs.DutyDto>
+
+@{
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+    int plus = 0;
+}
+
+<small class="text-center display-4 py-3">Aldığın Görevler Listesi</small>
+<hr class="border-success">
+@if (Model.Count != 0) @*Personelin GÖREVİ VAR İSE*@
+{
+    @foreach (var listStaff in Model)
+    {
+        plus++;
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h5 class="card-header">@listStaff.Name</h5>
+                        <div class="card-body shadow">
+                            <h5 class="card-text">@listStaff.Urgency.Definition</h5>
+                            <p class="card-text">@listStaff.Description</p>
+
+                            @if (listStaff.Reports.Count != 0) @*Rapor var  ise*@
+                            {
+                                <div class="button-area-one">
+                                    <a class="btn btn-outline-warning" data-toggle="collapse" href="#collapseExample-@plus"
+                                       role="button" aria-expanded="False" aria-controls="collapseExample">
+                                      <i class="fas fa-toggle-on mr-2"></i>  Rapolara Git
+                                    </a>
+                                    <span class="badge badge-danger" style="font-size: 15px;">@listStaff.Reports.Count</span>
+                                </div>
+
+
+                                <div class="button-area-two mt-3">
+                                    <a asp-controller="StaffWorkOrder" asp-action="TaskCompletion" asp-route-dutyId="@listStaff.Id" class="btn btn-outline-secondary" onclick="return confirm('@listStaff.Name Görevini Tamamlandı Olarak İşaretlemek İstiyor musunuz ?')"><i class="fas fa-clipboard-list mr-2"></i>Tamamlandı Olarak İşaretle</a>
+                                </div>
+
+                                <div class="collapse" id="collapseExample-@plus">
+                                    <table class="table table-hover table-bordered table-sm">
+
+                                        <tr>
+                                            <th>Ad</th>
+                                            <th>Tanım</th>
+                                            <th>Düzenle</th>
+                                            <th>Sil</th>
+                                        </tr>
+                                        @foreach (var reports in listStaff.Reports)
+                                        {
+                                            <tr>
+                                                <td>@reports.ReportDefinition</td>
+                                                <td>@reports.ReportDetail</td>
+                                                <td>
+                                                    <a asp-controller="StaffWorkOrder" asp-action="UpdateReports" asp-route-id="@reports.ReportId" class="btn btn-light btn-sm">
+                                                        <i class="fas fa-edit"></i> Raporu Düzenle
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a asp-controller="StaffWorkOrder" asp-action="RemoveReports" asp-route-id="@reports.ReportId" class="btn btn-outline-danger btn-sm" onclick="return confirm('@reports.ReportDefinition Adlı Raporu Silmek İstediğiniz den Emin Misiniz?')">
+                                                        <i class="fas fa-eraser"></i> Raporu Sil
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </table>
+                                    <a asp-controller="StaffWorkOrder" asp-action="AddReport" asp-route-id="@listStaff.Id" class="btn btn-success mt-3 btn-sm"><i class="fas fa-paper-plane mr-2"></i>Rapor'u Yazınız</a>
+                                </div>
+                            }
+                            else
+                            {
+                                <span class="badge badge-danger" style="font-size: 16px;font-family: 'Bell MT',serif">Rapor Bulunamadı.</span>
+                                <br/>
+                                <a asp-controller="StaffWorkOrder" asp-action="AddReport" asp-route-id="@listStaff.Id" class="btn btn-outline-success mt-3"><i class="fas fa-paper-plane mr-2"></i>Rapor Yaz</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+else @*personelin GÖREVİ YOK İSE*@
+{
+    <div class="py-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="badge badge-danger text-center">
+                    <span style="font-size: 16px;"> @User.Identity.Name Personelin Bir Görev'i Bulunamadı.</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

@@ -1,0 +1,31 @@
+﻿@model Chase.Entities.DTOs.ReportDto
+
+@{
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+
+}
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <a asp-controller="StaffWorkOrder" asp-action="TaskListOfStaff" class="btn btn-outline-danger btn-sm float-left"><i class="fas fa-backward mr-2"></i>Geri Dön</a>
+            <h5 class="text-center">Raporunuzu Güncelleyiniz.</h5>
+            <hr class="border-success">
+            <form method="post" asp-controller="StaffWorkOrder" asp-action="UpdateReports">
+                <div class="form-group">
+                    <label style="font-family: 'Arial Black',serif">Raporun Açıklaması</label>
+                    <input type="text" asp-for="@Model.ReportDefinition" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label style="font-family: 'Arial Black',serif">Raporun Detayı</label>
+                    <textarea asp-for="@Model.ReportDetail" class="form-control"></textarea>
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-outline-success" value="Raporu Güncelle">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

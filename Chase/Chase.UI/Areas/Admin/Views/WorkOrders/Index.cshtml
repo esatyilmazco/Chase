@@ -1,0 +1,71 @@
+﻿@model List<Chase.Entities.Tangible.Duty>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+<h4 class="text-center display-4 py-2">İş Süreçleri Listesi</h4>
+<hr class="border-secondary"/>
+@if (Model.Count != 0)
+{
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+
+            <th>Ad</th>
+            <th>Açıklama</th>
+            <th>Oluşturulma Tarihi</th>
+            <th>Çalışan Personel</th>
+            <th>İş'in Planı</th>
+            <th>Rapor Sayısı</th>
+            <th>İşlem</th>
+        </tr>
+        @foreach (var dutyAllTablesList in Model)
+        {
+            <tr>
+                <td>@dutyAllTablesList.Name</td>
+                <td>@dutyAllTablesList.Description</td>
+                <td style="font-family: 'Century Schoolbook',serif">@dutyAllTablesList.CreationDate</td>
+                <td>
+                    @{
+                        if (dutyAllTablesList.AppUser == null)
+                        {
+                            <span class="badge badge-danger">Çalışan Personel Yok.</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-success">@dutyAllTablesList.AppUser çalışıyor</span>
+                        }
+                    }
+                </td>
+                <td>@dutyAllTablesList.Urgency.Definition</td>
+                <td class="font-italic">@dutyAllTablesList.Reports.Count</td>
+                <td>
+                    @{
+                        if (dutyAllTablesList.AppUser == null)
+                        {
+                            <a asp-controller="WorkOrders" asp-action="AppointStaff" class="btn btn-outline-warning btn-sm" asp-route-id="@dutyAllTablesList.Id">Personel Görevlendir</a>
+                        }
+                        else
+                        {
+                            <a asp-controller="WorkOrders" asp-action="ShowJobDetail" class="btn btn-info btn-sm" asp-route-id="@dutyAllTablesList.Id">Sürecin Detayını Göster</a>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+        </thead>
+
+
+    </table>
+}
+else
+{
+    <div class="jumbotron">
+        <div class="jumbotron-body">
+            <div class="text-center lead mt-4">
+                <span class="alert-danger"><i class="fas fa-exclamation-triangle mr-2 fa-2x"></i>Tanımlı İş Süreci Bulunamadı.Görev Ekleyip İşleri Personele Verebilirsiniz.</span>
+            </div>
+        </div>
+    </div>
+}

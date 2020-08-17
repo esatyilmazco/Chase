@@ -1,0 +1,34 @@
+﻿@model Chase.Entities.DTOs.DutyListAllDto
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+ 
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center lead" style="font-family: 'Californian FB',cursive;letter-spacing: 1px;">Görev Bilgileri</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-text">
+                        <strong style="font-family: 'Arial Narrow',serif">Görev Adı : </strong> @Model.Name
+                    </h5>
+                    <p class="card-text">
+                        <strong style="font-family: 'Arial Narrow',serif">Görev Açıklaması : </strong> @Model.Description
+                    </p>
+                    <p class="card-text">
+                        <strong style="font-family: 'Arial Narrow',serif">İş Planı : </strong><span class="badge badge-info">@Model.Urgency.Definition</span>
+                    </p>
+                    <small class="card-text text-muted">
+                        <strong> Görev'in Eklendiği Tarih : </strong> @Model.CreationDate.ToString("D")<i class="fas fa-clock ml-2"></i>
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            @await Component.InvokeAsync("ListOfStaff")
+        </div>
+    </div>
+</div>

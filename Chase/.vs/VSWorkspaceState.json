@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Chase.DataAccess",
+    "\\Chase.DataAccess\\Tangible",
+    "\\Chase.DataAccess\\Tangible\\EntityFrameworkCore",
+    "\\Chase.DataAccess\\Tangible\\EntityFrameworkCore\\ContextFile"
+  ],
+  "SelectedNode": "\\Chase.DataAccess\\Tangible\\EntityFrameworkCore\\ContextFile\\ChaseContext.cs",
+  "PreviewInSolutionExplorer": false
+}

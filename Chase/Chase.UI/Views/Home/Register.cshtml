@@ -1,0 +1,42 @@
+﻿@model Chase.UI.Models.AppUserRegisterViewModel
+@{
+    Layout = "~/Views/Shared/_NormalLayout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h5 class="text-warning text-center mt-5" style="font-family: 'Roboto', sans-serif; font-size: 2rem;">Personel Kayıt Sayfası</h5>
+
+            <hr class="border-dark">
+            <form method="post" class="mt-5 mx-auto p-3 shadow">
+                <div class="form-group">
+                    <input type="text" asp-for="@Model.Name" placeholder="Adınız" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="text" asp-for="@Model.SurName" placeholder="Soyadınız" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="email" asp-for="@Model.Email" placeholder="E-Mail Adresiniz" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="text" asp-for="@Model.UserName" placeholder="Kullanıcı Adınız" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="password" asp-for="@Model.Password" placeholder="Şifreniz" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="password" asp-for="@Model.ConfirmPassword" placeholder="Şifre Onaylama" class="form-control">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-outline-success">Kayıt Ol</button>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-danger ml-3">Vazgeç</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+D:\Asp.netCoreMVC\Chase\Chase.Core\bin\Debug\netcoreapp3.1\Chase.Core.deps.json
+D:\Asp.netCoreMVC\Chase\Chase.Core\bin\Debug\netcoreapp3.1\Chase.Core.dll
+D:\Asp.netCoreMVC\Chase\Chase.Core\bin\Debug\netcoreapp3.1\Chase.Core.pdb
+D:\Asp.netCoreMVC\Chase\Chase.Core\obj\Debug\netcoreapp3.1\Chase.Core.csprojAssemblyReference.cache
+D:\Asp.netCoreMVC\Chase\Chase.Core\obj\Debug\netcoreapp3.1\Chase.Core.AssemblyInfoInputs.cache
+D:\Asp.netCoreMVC\Chase\Chase.Core\obj\Debug\netcoreapp3.1\Chase.Core.AssemblyInfo.cs
+D:\Asp.netCoreMVC\Chase\Chase.Core\obj\Debug\netcoreapp3.1\Chase.Core.csproj.CoreCompileInputs.cache
+D:\Asp.netCoreMVC\Chase\Chase.Core\obj\Debug\netcoreapp3.1\Chase.Core.dll
+D:\Asp.netCoreMVC\Chase\Chase.Core\obj\Debug\netcoreapp3.1\Chase.Core.pdb

@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "Jdy9KsvNzqytR++HVi3BCSoq2exfdfuyZS07RUVk0LaqKyqjl71lx8fh43snuUqaus9rPax9W+V1cyAgZu126w==",
+  "success": true,
+  "projectFilePath": "D:\\Asp.netCoreMVC\\Chase\\Chase.Core\\Chase.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\fluentvalidation\\9.0.0-preview5\\fluentvalidation.9.0.0-preview5.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.0-preview.6.20312.4\\microsoft.entityframeworkcore.5.0.0-preview.6.20312.4.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.0-preview.6.20312.4\\microsoft.entityframeworkcore.abstractions.5.0.0-preview.6.20312.4.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.0-preview.6.20312.4\\microsoft.entityframeworkcore.analyzers.5.0.0-preview.6.20312.4.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0-preview.3.20215.2\\microsoft.extensions.caching.abstractions.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0-preview.3.20215.2\\microsoft.extensions.caching.memory.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0-preview.3.20215.2\\microsoft.extensions.configuration.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0-preview.3.20215.2\\microsoft.extensions.configuration.abstractions.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0-preview.3.20215.2\\microsoft.extensions.configuration.binder.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0-preview.3.20215.2\\microsoft.extensions.dependencyinjection.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0-preview.3.20215.2\\microsoft.extensions.dependencyinjection.abstractions.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0-preview.3.20215.2\\microsoft.extensions.logging.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0-preview.3.20215.2\\microsoft.extensions.logging.abstractions.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.options\\5.0.0-preview.3.20215.2\\microsoft.extensions.options.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0-preview.3.20215.2\\microsoft.extensions.primitives.5.0.0-preview.3.20215.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\system.collections.immutable\\5.0.0-preview.3.20214.6\\system.collections.immutable.5.0.0-preview.3.20214.6.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0-preview.3.20214.6\\system.componentmodel.annotations.5.0.0-preview.3.20214.6.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0-preview.3.20214.6\\system.diagnostics.diagnosticsource.5.0.0-preview.3.20214.6.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\Esat-Can\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0-preview.3.20214.6\\system.runtime.compilerservices.unsafe.5.0.0-preview.3.20214.6.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+@*Kullanıcı Alanı'nın Ana Sayfası*@
+
+<body>
+<div>
+
+    <h5 class="display-3 text-danger">Personel Sayfasına Hoşgeldiniz</h5>
+
+    <hr class="border-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body shadow">
+                        <h3>Bildirimler<i class="fas fa-bell fa-1x ml-2"></i></h3>
+                        <hr>
+                        @*Bildirim Componenti*@
+                        @await Component.InvokeAsync("StaffNotification")
+                    </div>
+                </div>
+                <hr>
+                <div class="card">
+                    <div class="card-body shadow">
+                        <h3>
+                            Mesajlar <i class="fas fa-envelope-square fa-1x ml-2 text-muted"></i>
+                        </h3>
+                        <hr>
+                        @*Mesaj Compenenti*@
+                        @await Component.InvokeAsync("Message")
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body show text-center">
+                        <h5>Görevlerin'de Yazmış Olduğu Toplam Rapor Sayısı<i class="fas fa-clipboard fa-1x ml-2"></i></h5>
+                        <hr class="border-info">
+                        @if (@ViewBag.NumberOfReportsWritten > 0)
+                        {
+                            <strong class="badge badge-info" style="font-size: 15px;">@ViewBag.NumberOfReportsWritten</strong>
+                        }
+                        else
+                        {
+                            <strong class="badge badge-danger" style="font-size: 15px;">Şuan Yazılan Rapor Yok</strong>
+                        }
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body show text-center">
+                        <h5>Yapılacak Görev Sayısı<i class="far fa-list-alt fa-1x ml-2"></i></h5>
+                        <hr class="border-dark">
+                        @if (@ViewBag.NumberOfTaskToBe > 0)
+                        {
+                            <strong class="badge badge-warning" style="font-size: 15px;">@ViewBag.NumberOfTaskToBe</strong>
+                        }
+                        else
+                        {
+                            <strong class="badge badge-danger">Şuan Yapılması Gereken Görev Yok</strong>
+                        }
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body show text-center">
+                        <h5>Toplam Bitmiş Görev Sayısı<i class="fas fa-clipboard-check fa-1x ml-2"></i></h5>
+                        <hr class="border-secondary">
+                        @if (@ViewBag.NumberOfTasksPerformed > 0)
+                        {
+                            <strong class="badge badge-success" style="font-size: 15px;">@ViewBag.NumberOfTasksPerformed</strong>
+                        }
+                        else
+                        {
+                            <strong class="badge badge-danger" style="font-size: 15px;">Şuan Bitirilen Görev Yok</strong>
+                        }
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>

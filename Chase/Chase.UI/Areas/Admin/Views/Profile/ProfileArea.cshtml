@@ -1,0 +1,31 @@
+﻿@model Chase.Entities.DTOs.AppUserListDto
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <small class="display-4">Yönetici Profili<i class="fas fa-user-tie ml-2"></i></small>
+            <hr>
+                <input type="hidden" asp-for="@Model.Id">
+                <div class="form-group">
+                    <label>Adınız</label>
+                    <input type="text" class="form-control" asp-for="@Model.Name">
+                </div>
+                <div class="form-group">
+                    <label>Soyadınız</label>
+                    <input type="text" class="form-control" asp-for="@Model.SurName">
+
+                </div>
+                <div class="form-group">
+                    <label>E-Mail</label>
+                    <input type="email" class="form-control" asp-for="@Model.Email">
+
+                </div>
+                <br>
+              
+        </div>
+    </div>
+</div>

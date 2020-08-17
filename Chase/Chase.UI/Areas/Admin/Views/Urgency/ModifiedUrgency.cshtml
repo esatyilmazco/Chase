@@ -1,0 +1,18 @@
+﻿@model Chase.Entities.DTOs.UrgencyDto
+
+@*Güncellenecek Ürünün Listesi.Definition'u Güncelleyeceğiz.*@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="w-75 mx-auto p-3">
+    <h3 class="text-center" style="font-family: 'Roboto Slab', serif; letter-spacing: 1px; ">İş Planı Güncelleyiniz</h3>
+    <hr class="border-success">
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Definition" class="form-control">
+    </div>
+    <div class="text-center mt-3">
+        <button type="submit" class="btn btn-outline-warning">İşi Güncelle</button>
+    </div>
+
+</form>

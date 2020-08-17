@@ -1,0 +1,20 @@
+﻿@model Chase.Entities.DTOs.UrgencyDto
+
+
+@*Burası İş Ekleme Sayfası,Biz İşi Burada Ekleriz.*@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 class="text-center py-4" style="font-family: 'Epilogue', sans-serif;">İş'in Planını Ekleyiniz</h3>
+<hr>
+<form method="post" class="w-75 mx-auto p-3">
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Definition" class="form-control" placeholder="İş Planı">
+    </div>
+    <div class="text-center mt-2">
+        <button type="submit" class="btn btn-outline-dark">İşi Kaydet</button>
+
+    </div>
+
+</form>

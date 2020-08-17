@@ -1,0 +1,73 @@
+﻿@model List<Chase.Entities.DTOs.DutyListAllDto>
+
+@{
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+    int plus = 0;
+}
+<small class="text-center display-4 mt-3">Tamamlanan Görevlerin Listesi</small>
+<hr class="border-right">
+@if (Model.Count != 0) @*Personelin GÖREVİ VAR İSE*@
+{
+    @foreach (var listStaffDutyValue in Model)
+    {
+        plus++;
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <h5 class="card-header">@listStaffDutyValue.Name</h5>
+                        <div class="card-body">
+                            <h5 class="badge badge-info card-text">@listStaffDutyValue.Urgency.Definition</h5>
+                            <p class="card-text" style="font-family: 'Arial',sans-serif">@listStaffDutyValue.Description</p>
+
+                            @if (listStaffDutyValue.Reports.Count != 0) @*Rapor var  ise*@
+                            {
+                                <div class="button-area-one">
+                                    <a class="btn btn-outline-warning" data-toggle="collapse" href="#collapseExample-@plus"
+                                       role="button" aria-expanded="False" aria-controls="collapseExample">
+                                      <i class="fas fa-eye mr-2"></i>  Rapoları Gör
+                                    </a>
+                                    <span class="badge badge-danger" style="font-size: 15px;">@listStaffDutyValue.Reports.Count</span><strong> Rapor</strong>
+                                </div>
+
+
+                                <div class="collapse" id="collapseExample-@plus">
+                                    <table class="table table-hover table-bordered table-sm">
+
+                                        <tr>
+                                            <th>Ad</th>
+                                            <th>Tanım</th>
+
+                                        </tr>
+                                        @foreach (var reports in listStaffDutyValue.Reports)
+                                        {
+                                            <tr>
+                                                <td>@reports.ReportDefinition</td>
+                                                <td>@reports.ReportDetail</td>
+                                            </tr>
+                                        }
+
+                                    </table>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+else @*personelin GÖREVİ YOK İSE*@
+{
+    <div class="py-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="badge badge-danger text-center">
+                    <span style="font-size: 16px;"> @User.Identity.Name Personelin Bir Görev'i Bulunamadı.</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

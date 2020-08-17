@@ -1,0 +1,63 @@
+﻿@model Chase.UI.Models.AppUserLoginViewModel
+@{
+    Layout = "~/Views/Shared/_NormalLayout.cshtml";
+}
+@*Uygulama İlk Açıldığın'da Çıkan Sayfa*@
+
+
+<body>
+<div class="text-center text-success py-2">
+    <h3 class="display-4">Personel Takip Sistemine Hoş Geldiniz</h3>
+</div>
+<hr>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="card">
+                    <div class="card-body shadow text-center">
+                        <label class="text-warning" style="font-family: 'Red Rose', cursive; font-size: 2rem;">Personel Girişi <i class="fas fa-user ml-1"></i></label>
+                        <form method="post" asp-controller="Home" asp-action="Login">
+                            <input type="text" class="form-control" placeholder="Personel Kullanıcı Adınız" asp-for="@Model.UserName">
+                            <br>
+                            <input type="password" class="form-control" placeholder="Şifreniz" asp-for="@Model.Password">
+                            <br>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-sign-in-alt mr-2"></i>Personel Girişi</button>
+                                <a asp-controller="Home" asp-action="Register" class="btn btn-success ml-2">Kayıt Ol</a>
+                            </div>
+                        </form>
+                        <span style="font-family: 'Berlin Sans FB',cursive">Personel Sistemine Girmek İçin</span>
+                        <ul>
+                            <li>Kullanıcı Adı : personelDemo</li>
+                            <li style="letter-spacing: 1px;">Şifre : 12345678910</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body shadow text-center">
+                    <label class="text-danger" style="font-family: 'Red Rose', cursive; font-size: 2rem;">Yönetici Girişi<i class="fas fa-user-tie ml-2"></i></label>
+                    <form method="post" asp-controller="Home" asp-action="Login">
+                        <input type="text" class="form-control" placeholder="Yönetici Kullanıcı Adınız" asp-for="@Model.UserName">
+                        <br>
+                        <input type="password" class="form-control" placeholder="Şifreniz" asp-for="@Model.Password">
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-outline-primary"><i class="fas fa-sign-in-alt mr-2"></i>Yönetici Girişi</button>
+                        </div>
+                    </form>
+                    <span style="font-family: 'Copperplate Gothic Light',serif">Yönetici Sistemine Girmek İçin</span>
+                    <ul>
+                        <li>Yönetici Kullanıcı Adı : codesat</li>
+                        <li>Yönetici Şifresi : codesatyilmaz</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>

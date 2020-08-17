@@ -1,0 +1,38 @@
+﻿@model Chase.Entities.DTOs.MessageDto
+
+@{
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+
+}
+
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" asp-controller="StaffMessage" asp-action="SendMessageToManager">
+                <h4 style="font-family: 'Apple Color Emoji',serif" id="mesaj">Mesaj Yollayınız</h4>
+                <div class="form-group">
+                    <input type="hidden" value="@User.Identity.Name" asp-for="@Model.ThePersonWhoSentTheMessage">
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea type="text" id="sendMessageText" asp-for="@Model.MessageText" class="form-control" placeholder="Mesajınız"></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="text" asp-for="@Model.AppUserId" class="form-control">
+                </div>
+
+                <i class="far fa-share-square"></i>
+                <input type="submit" id="sendButton" disabled="disabled" class="btn btn-warning" value="Mesaj'ı Yolla" onclick="alert('Mesajınız Başarılı Bir Şekil de İletildi.')">
+
+                @* <input type="submit" class="btn btn-outline-secondary" value="Mesaj'ı Yolla" onclick="return confirm('Mesaj Başarıyla İletildi.')"> *@
+
+                <a asp-controller="StaffMessage" asp-action="IncomingMessages" class="btn btn-outline-secondary"><i class="fas fa-comment-dots mr-2"></i>Gelen Mesajlar</a>
+            </form>
+        </div>
+        <div class="col-md-6">
+            @await  Component.InvokeAsync("ListOfManagerForMessage")
+        </div>
+ 
+    </div>
+</div>
